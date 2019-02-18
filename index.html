@@ -1,358 +1,365 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"K>
-<link rel="stylesheet" type="text/css" href="hishub.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" K>
+    <link rel="stylesheet" type="text/css" href="hishub.css">
 
 </head>
 
 <body onload="getLastSelectedBad()" id="bodyId">
 
-<div id="mainApp">
+    <div id="mainApp">
 
-    <div id="userData">
-        <table id="client">
-            <tr>
-                <th>Client</th>
-                <th>Date</th>
-                <th>Num order</th>
-            </tr>
-            <tr>
-                <td id="clientNameLablel"> </td>
-                <td>
-                    <input type="date" id="orderDate">
-                </td>
-                <td>
-                    <input type="number" id="orderNumber">
-                </td>
-            </tr>
-        </table>
+        <div id="userData">
+            <table id="client">
+                <tr>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Num order</th>
+                </tr>
+                <tr>
+                    <td id="clientNameLablel"> </td>
+                    <td>
+                        <input type="date" id="orderDate">
+                    </td>
+                    <td>
+                        <input type="number" id="orderNumber">
+                    </td>
+                </tr>
+            </table>
 
-        <table id="tfiraTable">
-            <tr>
-                <th>Kant</th>
-                <th>Hibur</th>
-                <th>Hebel</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="number" id="kant" value="70" list="kantList">
-                </td>
-                <td>
-                    <input type="number" id="hibur" value="25">
-                </td>
-                <td>
-                    <input type="number" id="hebel" value="50" list="hebelList">
-                </td>
-            </tr>
-            <th>
-                TFIRA:
-            </th>
-            <td colspan="2">
-                <select id="tfiraOption" autofocus="autofocus" onchange="selectChoice()">
-                    <option value="plata">PLATA</option>
-                    <option value="plataWithKant">PLATA WITH KANT</option>
-                    <option value="awings" selected="selected">AWINGS</option>
-                    <option value="awingsWithVolan">AWINGS WITH VOLAN</option>
-                    <option value="nofelet">NOFELET</option>
-                    <option value="nofeletWithVolan">NOFELET With Volan</option>
-                </select>
-            </td>
-            <tr>
-            </tr>
-        </table>
-
-        <!-- htmlsec -->
-        <table id="galilTable">
-            <tr>
-                <th>Bad Name</th>
-                <th>Width</th>
-                <th>Size(M)</th>
-            </tr>
-            <tr>
-                <td id="badName"> </td>
-                <td>
-                    <input type="number" id="rohabBad" value="" placeholder="width" list="widthList">
-                </td>
-                <td>
-                    <input type="number" id="orehGalil" value="">
-                </td>
-            </tr>
-
-        </table>
-
-        <table id="sizeTable">
-            <tr>
-                <th>Length</th>
-                <th>Width</th>
+            <table id="tfiraTable">
+                <tr>
+                    <th>Kant</th>
+                    <th>Hibur</th>
+                    <th>Hebel</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="kant" value="70" list="kantList">
+                    </td>
+                    <td>
+                        <input type="number" id="hibur" value="25">
+                    </td>
+                    <td>
+                        <input type="number" id="hebel" value="50" list="hebelList">
+                    </td>
+                </tr>
                 <th>
-                    <div class="sher">
-                        pice:
-                        <input type="checkbox" id="exitSheerit">
-                    </div>
+                    TFIRA:
                 </th>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="number" id="orehMidaInput" list="orehList">
-                </td>
-                <td>
-                    <input type="number" id="rohabMida" list="rohabList">
-                </td>
-                <td>
-                    <input type="number" id="mySherit" list="sheeritList"> 
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="3">
-                    <div id ="opthionDiv">
-                        <label> GZIRA:</label>
-            
-                        <select>
-                            <option> one side </option>
-                            <option> simtri big</option>
-                            <option> simtri litli </option>
-                            <option> equal </option>
-                        </select>
-            
-                        <label> REPET: </label>
-                        <input type="number" id="repet" value="1">
-                    </div>
-                </td>
-            </tr>
-            
-            
-        </table>
-
-        <table id="volanSharvolTable">
-            <tr>
-                <th>volan</th>
-                <th>sug-v</th>
-                <th>sharvul</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="number" id="volan" value="0" list="volanList">
-                </td>
-                <td>
-                    <select id="sugGali">
-                        <option value="gali">GALI</option>
-                        <option value="kipul" selected="selected">KIPUL</option>
-                        <option value="seret"> SERET</option>
+                <td colspan="2">
+                    <select id="tfiraOption" autofocus="autofocus" onchange="selectChoice()">
+                        <option value="plata">PLATA</option>
+                        <option value="plataWithKant">PLATA WITH KANT</option>
+                        <option value="awings" selected="selected">AWINGS</option>
+                        <option value="awingsWithVolan">AWINGS WITH VOLAN</option>
+                        <option value="nofelet">NOFELET</option>
+                        <option value="nofeletWithVolan">NOFELET With Volan</option>
                     </select>
                 </td>
-                <td>
-                    <input type="number" id="sharvul" value="0" list="sharvulList"> </td>
-            </tr>
-        </table>
-    </div>
+                <tr>
+                </tr>
+            </table>
 
-    <div id="sheeritSection">
+            <!-- htmlsec -->
+            <table id="galilTable">
+                <tr>
+                    <th>Bad Name</th>
+                    <th>Width</th>
+                    <th>Size(M)</th>
+                </tr>
+                <tr>
+                    <td id="badName"> </td>
+                    <td>
+                        <input type="number" id="rohabBad" value="" placeholder="width" list="widthList" readonly>
+                    </td>
+                    <td>
+                        <input type="number" id="orehGalil" value="" readonly>
+                    </td>
+                </tr>
 
-        <table id="sheeritTable">
-            <tr>
-                <th>OP</th>
-                <th>LEFT</th>
-                <th>WIDTH</th>
-                <th>RIGHT</th>
-            </tr>
+            </table>
 
-            <tr id="tr1">
-                <td> #1</td>
-                <td id="op1InL"></td>
-                <td id="op1Shalem"></td>
-                <td id="op1InR"></td>
-            </tr>
-            <tr id="tr2">
-                <td> #2</td>
-                <td id="op2InL"></td>
-                <td id="op2Shalem"></td>
-                <td id="op2InR"></td>
+            <table id="sizeTable">
+                <tr>
+                    <th>Length</th>
+                    <th>Width</th>
+                    <th>
+                        <div class="sher">
+                            With Pice:
+                            <input type="checkbox" id="exitSheerit">
+                        </div>
+                    </th>
+                </tr>
 
-            </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="orehMidaInput" list="orehList">
+                    </td>
+                    <td>
+                        <input type="number" id="rohabMida" list="rohabList">
+                    </td>
+                    <td>
+                        <input type="number" id="mySherit" list="sheeritList">
+                    </td>
+                </tr>
 
-            <tr id="tr3">
-                <td> #3</td>
-                <td id="op3InL"></td>
-                <td id="op3Shalem"></td>
-                <td id="op3InR"></td>
-            </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="opthionDiv">
+                            <label> GZIRA:</label>
 
-            <tr id="tr4">
-                <td> #4</td>
-                <td id="op4InL"></td>
-                <td id="op4Shalem"></td>
-                <td id="op4InR"></td>
-            </tr>
+                            <select>
+                                <option> one side </option>
+                                <option> simtri big</option>
+                                <option> simtri litli </option>
+                                <option> equal </option>
+                            </select>
 
-        </table>
-
-
-        <div id="mainDiv">
-
-        </div>
-
-    </div>
-    <!--End of sherit section-->
-
-    <div id="orehTable">
-
-        <div id="orehDiv ">
-
-
-            <ol id="listOreh">
-            </ol>
-
-        </div>
-        <div id="totalOrehDiv">
-            Total:
-            <br>
-            <label id="totalOreh">0</label>
-        </div>
-        <div id="savedData">
-            Saved:
-            <br>
-            <label id="savedDataLbl">0</label>M
-        </div>
-        <div id="orehBtns">
-
-            <button id="deleteLast" onclick="deleteLastOreh()"> Delete Last</button>
-            <button id="clearSaved" onclick="clearSaved()"> Clear Saved </button>
+                            <label> REPET: </label>
+                            <input type="number" id="repet" value="1">
+                        </div>
+                    </td>
+                </tr>
 
 
-            <button id="saveOreh" onclick="saveOrehBad()">Save
-            </button>
+            </table>
 
-            <button id="restBtn" onclick="restTotalOreh()">Delete All
-            </button>
-
-
-        </div>
-    </div>
-
-    <div id="badSec">
-        <button id="exitMenuBadBtn" > X </button>
-        <div id="badListDiv">
-            <table id="badListTable">
+            <table id="volanSharvolTable">
+                <tr>
+                    <th>volan</th>
+                    <th>sug-v</th>
+                    <th>sharvul</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="volan" value="0" list="volanList">
+                    </td>
+                    <td>
+                        <select id="sugGali">
+                            <option value="gali">GALI</option>
+                            <option value="kipul" selected="selected">KIPUL</option>
+                            <option value="seret"> SERET</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" id="sharvul" value="0" list="sharvulList"> </td>
+                </tr>
             </table>
         </div>
-        <div id="DataEnter">
-            <input type="text"   id="enterNameBad"  placeholder="Name">
-            <input type="number" id="enterWidthBad" placeholder="width">
-            <input type="number" id="enterOrehBad"  placeholder="Length">
-            </br>
-            </br>
-            <button id="saveInLocalStorage">Save</button>
-            <button id="deleteInLocalStorage">delete</button>
-            <button id="selectBad">select</button>
 
-        </div>
-    </div>
+        <div id="sheeritSection">
 
-    <div id="clientSec">
-        <button id="exitClientBtn">X</button>
-        <div id="clientDiv">
-            <table id="clientList">
+                <div class ="top"> 
+                        <button class ="exit">X</button>
+                    </div>
+
+            <table id="sheeritTable">
+                <tr>
+                    <th>OP</th>
+                    <th>LEFT</th>
+                    <th>WIDTH</th>
+                    <th>RIGHT</th>
+                </tr>
+
+                <tr id="tr1">
+                    <td> #1</td>
+                    <td id="op1InL"></td>
+                    <td id="op1Shalem"></td>
+                    <td id="op1InR"></td>
+                </tr>
+                <tr id="tr2">
+                    <td> #2</td>
+                    <td id="op2InL"></td>
+                    <td id="op2Shalem"></td>
+                    <td id="op2InR"></td>
+
+                </tr>
+
+                <tr id="tr3">
+                    <td> #3</td>
+                    <td id="op3InL"></td>
+                    <td id="op3Shalem"></td>
+                    <td id="op3InR"></td>
+                </tr>
+
+                <tr id="tr4">
+                    <td> #4</td>
+                    <td id="op4InL"></td>
+                    <td id="op4Shalem"></td>
+                    <td id="op4InR"></td>
+                </tr>
+
             </table>
-        </div>
-        <div id="EditShowClient">
-            <input type="text" id="enterclientName" value="" placeholder="Client">
-            <input type="number" id="enterTel" value="" placeholder="Tel ">
-            <input type="text " id="enterStreet" value="" placeholder="Street ">
-            </br>
-            </br>
-            <button id="saveDataLocal">Save</button>
-            <button id="deleteDataLocal">delete</button>
-            <button id="selectClient">select</button>
+
+
+            <div id="mainDiv">
+
+            </div>
 
         </div>
-    </div>
+        <!--End of sherit section-->
 
-    <div id="opthionData">
-        <button id="saveDataBtn">SAVE</button>
-        <button id="showSavedData">SHOW</button>
-        <button id ="exitMenu">X</button>
-    </div>
+        <div id="orehTable">
+            <div class ="top"> 
+                <button class ="exit">X</button>
+            </div>
 
-    <div id="orderData">
-        <button id="exitOpthionData">X</button>
-        <div id="orderSavedData"></div>
-        <button id="deleteLastOrderBtn"> DELETE LAST</button>
-    </div>
+            <div id="orehDiv ">
 
-    <div id="buttons">
-        <button id="hashebSheeritBtn"> SHERIT</button>
-        <button id="showUserData"> DATA</button>
-        <button id="hashebOreh" onclick="orehFun()">OREH</button>
+
+                <ol id="listOreh">
+                </ol>
+
+            </div>
+            <div id="totalOrehDiv">
+                Total:
+                <br>
+                <label id="totalOreh">0</label>
+            </div>
+            <div id="savedData">
+                Saved:
+                <br>
+                <label id="savedDataLbl">0</label>M
+            </div>
+            <div id="orehBtns">
+
+                <button id="deleteLast" onclick="deleteLastOreh()"> Delete Last</button>
+                <button id="clearSaved" onclick="clearSaved()"> Clear Saved </button>
+
+
+                <button id="saveOreh" onclick="saveOrehBad()">Save
+                </button>
+
+                <button id="restBtn" onclick="restTotalOreh()">Delete All
+                </button>
+
+
+            </div>
+        </div>
+
+        <div id="badSec">
+            <button id="exitMenuBadBtn"> X </button>
+            <div id="badListDiv">
+                <table id="badListTable">
+                </table>
+            </div>
+            <div id="DataEnter">
+                <input type="text" id="enterNameBad" placeholder="Name">
+                <input type="number" id="enterWidthBad" placeholder="width">
+                <input type="number" id="enterOrehBad" placeholder="Length">
+                </br>
+                </br>
+                <button id="saveInLocalStorage">Save</button>
+                <button id="deleteInLocalStorage">delete</button>
+                <button id="selectBad">select</button>
+
+            </div>
+        </div>
+
+        <div id="clientSec">
+            <button id="exitClientBtn">X</button>
+            <div id="clientDiv">
+                <table id="clientList">
+                </table>
+            </div>
+            <div id="EditShowClient">
+                <input type="text" id="enterclientName" value="" placeholder="Client">
+                <input type="number" id="enterTel" value="" placeholder="Tel ">
+                <input type="text " id="enterStreet" value="" placeholder="Street ">
+                </br>
+                </br>
+                <button id="saveDataLocal">Save</button>
+                <button id="deleteDataLocal">delete</button>
+                <button id="selectClient">select</button>
+
+            </div>
+        </div>
+
+        <div id="opthionData">
+            <button id="saveDataBtn">SAVE</button>
+            <button id="showSavedData">SHOW</button>
+            <button id="exitMenu">X</button>
+        </div>
+
+        <div id="orderData">
+            <button id="exitOpthionData">X</button>
+            <div id="orderSavedData"></div>
+            <button id="deleteLastOrderBtn"> DELETE LAST</button>
+        </div>
+
+        <div id="buttons">
+            <button id="hashebSheeritBtn"> SHERIT</button>
+            <button id="showUserData"> DATA</button>
+            <button id="hashebOreh" onclick="orehFun()">OREH</button>
+        </div>
     </div>
-</div>
 
     <datalist id="orehList">
         <option value="2000">
-            <option value="2250">
-                <option value="2500">
-                    <option value="2750">
-                        <option value="3000">
-                            <option value="3250">
-                                <option value="3500">
-                                    <option value="3750">
-                                        <option value="4250">
+        <option value="2250">
+        <option value="2500">
+        <option value="2750">
+        <option value="3000">
+        <option value="3250">
+        <option value="3500">
+        <option value="3750">
+        <option value="4250">
     </datalist>
 
     <datalist id="rohabList">
         <option value="2870">
-            <option value="3370">
-                <option value="3870">
-                    <option value="4070">
-                        <option value="4370">
-                            <option value="4870">
-                                <option value="5370">
-                                    <option value="6870">
+        <option value="3370">
+        <option value="3870">
+        <option value="4070">
+        <option value="4370">
+        <option value="4870">
+        <option value="5370">
+        <option value="6870">
     </datalist>
 
 
     <datalist id="volanList">
         <option value="0">
-            <option value="200">
-                <option value="250">
-                    <option value="300">
+        <option value="200">
+        <option value="250">
+        <option value="300">
     </datalist>
 
 
     <datalist id="widthList">
         <option value="1200">
-            <option value="1205">
-                <option value="1500">
+        <option value="1205">
+        <option value="1500">
     </datalist>
 
     <datalist id="orehGalilList">
         <option value="0">
-            <option value="50">
-                <option value="60">
+        <option value="50">
+        <option value="60">
     </datalist>
 
 
     <datalist id="hebelList">
         <option value="0">
-            <option value="30">
-                <option value="50">
+        <option value="30">
+        <option value="50">
     </datalist>
 
 
     <datalist id="sharvulList">
         <option value="0">
-            <option value="50">
-                <option value="70">
-                    <option value="100">
+        <option value="50">
+        <option value="70">
+        <option value="100">
     </datalist>
 
     <datalist id="kantList">
         <option value="0">
-            <option value="50">
-                <option value="70">
+        <option value="50">
+        <option value="70">
     </datalist>
 
     <datalist id="sheeritList">

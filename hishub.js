@@ -97,10 +97,20 @@ function sherit() {
 
         if (rohabMida > 0) {
 
-            document.getElementById("userData").style.display = "none";
+            //document.getElementById("userData").style.display = "none";
             document.getElementById("sheeritSection").style.display = "block";
             document.getElementById("orehTable").style.display = "none";
             document.getElementById("showUserData").style.display = "block";
+
+            if (document.getElementById("exitSheerit").checked == true) {
+            
+                mySherit =  Number(document.getElementById("mySherit").value);
+
+            }
+            else 
+            {
+              mySherit = 0;
+            }
 
             if (mySherit > 0)
                 sher = sher + hibur;
@@ -155,7 +165,7 @@ function orehFun() {
 
                 document.getElementById("orehTable").style.display = "block";
                 document.getElementById("sheeritSection").style.display = "none";
-                document.getElementById("userData").style.display = "none";
+               // document.getElementById("userData").style.display = "none";
                 document.getElementById("showUserData").style.display = "block";
 
                 var one = 0;
@@ -163,8 +173,15 @@ function orehFun() {
                     one = 1;
 
                 var tmpShalem = shelem;
-                if (document.getElementById("exitSheerit").checked == true)
+                if (document.getElementById("exitSheerit").checked == true) {
                     tmpShalem--;
+                    mySherit =  Number(document.getElementById("mySherit").value);
+
+                }
+                else 
+                {
+                  mySherit = 0;
+                }
 
 
 
@@ -499,6 +516,7 @@ function deleteNodes() {
             else {
 
                 for (var i = 0; i < (badListData.length); i++) {
+                    
                     var trNode = document.createElement("tr");
                     var td0 = document.createElement("td");
                     var td1 = document.createElement("td");
@@ -1108,3 +1126,8 @@ function loadPices() {
     //document.getElementById("mySherit").addEventListener("click", loadPices);
     loadPices();
 
+    document.querySelector("#sheeritSection .exit").addEventListener("click",
+    function(){document.querySelector("#sheeritSection").style.display="none"})
+
+    document.querySelector("#orehTable .exit").addEventListener("click",
+    function(){document.querySelector("#orehTable").style.display="none"})
