@@ -116,7 +116,7 @@
     }
     
     input {
-    width:100%;
+    width: 100%;
     font-size:var(--fontSize);
     text-align:center;
     margin:2px;
@@ -534,6 +534,6 @@
      bottom:0%;
      background-color:yellow;
     }
-    opthionDiv{
+    #opthionDiv{
         display: flex;
     }
