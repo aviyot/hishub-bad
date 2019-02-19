@@ -624,6 +624,7 @@ function enterBadRecord() {
                         localStorage.setItem("badListObj", JSON.stringify(badArray));
                         alert("Item Updated");
                     }
+                    selectBad();
                 }
 
 

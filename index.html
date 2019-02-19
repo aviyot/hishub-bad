@@ -46,19 +46,32 @@
                         <input type="number" id="hebel" value="50" list="hebelList">
                     </td>
                 </tr>
-                <th>
-                    TFIRA:
-                </th>
-                <td colspan="2">
-                    <select id="tfiraOption" autofocus="autofocus" onchange="selectChoice()">
-                        <option value="plata">PLATA</option>
-                        <option value="plataWithKant">PLATA WITH KANT</option>
-                        <option value="awings" selected="selected">AWINGS</option>
-                        <option value="awingsWithVolan">AWINGS WITH VOLAN</option>
-                        <option value="nofelet">NOFELET</option>
-                        <option value="nofeletWithVolan">NOFELET With Volan</option>
-                    </select>
-                </td>
+                <tr>
+
+                    <td>TFIRA: </td>
+                    <td><select id="tfiraOption" autofocus="autofocus" onchange="selectChoice()">
+                            <option value="plata">PLATA</option>
+                            <option value="plataWithKant">PLATA WITH KANT</option>
+                            <option value="awings" selected="selected">AWINGS</option>
+                            <option value="awingsWithVolan">AWINGS WITH VOLAN</option>
+                            <option value="nofelet">NOFELET</option>
+                            <option value="nofeletWithVolan">NOFELET With Volan</option>
+                        </select> 
+                    </td>
+                   
+                    <td>   
+                            <div id="opthionDiv">
+                                <label for="gziraOp"> GZIRA:</label>
+                                <select id="gziraOp">
+                                    <option> one side </option>
+                                    <option> simtri big</option>
+                                    <option> simtri litli </option>
+                                    <option> equal </option>
+                                </select>
+                            </div>
+                    
+                </tr>
+                
                 <tr>
                 </tr>
             </table>
@@ -88,10 +101,11 @@
                     <th>Width</th>
                     <th>
                         <div class="sher">
-                            With Pice:
+                            Pice
                             <input type="checkbox" id="exitSheerit">
                         </div>
                     </th>
+                    <th>    <label> Repet</label> </th>
                 </tr>
 
                 <tr>
@@ -104,27 +118,13 @@
                     <td>
                         <input type="number" id="mySherit" list="sheeritList">
                     </td>
-                </tr>
-
-                <tr>
-                    <td colspan="3">
-                        <div id="opthionDiv">
-                            <label> GZIRA:</label>
-
-                            <select>
-                                <option> one side </option>
-                                <option> simtri big</option>
-                                <option> simtri litli </option>
-                                <option> equal </option>
-                            </select>
-
-                            <label> REPET: </label>
+                    <td>
+                         
                             <input type="number" id="repet" value="1">
-                        </div>
                     </td>
                 </tr>
 
-
+            
             </table>
 
             <table id="volanSharvolTable">
@@ -208,11 +208,8 @@
             </div>
 
             <div id="orehDiv ">
-
-
                 <ol id="listOreh">
                 </ol>
-
             </div>
             <div id="totalOrehDiv">
                 Total:
@@ -228,13 +225,8 @@
 
                 <button id="deleteLast" onclick="deleteLastOreh()"> Delete Last</button>
                 <button id="clearSaved" onclick="clearSaved()"> Clear Saved </button>
-
-
-                <button id="saveOreh" onclick="saveOrehBad()">Save
-                </button>
-
-                <button id="restBtn" onclick="restTotalOreh()">Delete All
-                </button>
+                <button id="saveOreh" onclick="saveOrehBad()">Save</button>
+                <button id="restBtn" onclick="restTotalOreh()">Delete All </button>
 
 
             </div>
