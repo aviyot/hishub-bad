@@ -40,15 +40,13 @@
     
     #userData{
     position:absolute;
-    height:90%;
-    top:0%;
     box-sizing:border-box;
     display:flex;
     flex-direction:column;
     background-color:rgb(236, 227, 221);
     justify-content:space-around;
-    overflow:auto;
     width:100%;
+    height:90% ;
     }
     
     #userData th,#userData tr{
@@ -112,7 +110,7 @@
     
     th { 
     padding:2px;
-    border-bottom:1px solid black;
+   
     }
     
     input {
@@ -124,13 +122,24 @@
     }
     
     #userData td{
-    width:25%;
     text-align: center;
     }
     
-    #userData table {
-    border:2px solid Azure;
+    #userData  > table {
+   
+    height: calc(90%/5);
+  
     }
+
+    
+    #userData  > table:nth-child(even){
+        background-color:lightgray;
+        }
+    #userData  > table:nth-child(odd){
+    background-color: gray;
+    }
+
+
     
     
     .sher input{
@@ -396,6 +405,7 @@
     }
     
     #client {
+        background-color:brown;
     background-color:rgba(165, 42, 42, 0.356);
     }
     
@@ -463,9 +473,7 @@
     height:10%;
     }
     
-    #client {
-    background-color:brown;
-    }
+   
     
     #opthionData {
     position:absolute;
