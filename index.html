@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" K>
+    <title> Awings Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Awings,Awings Calculator">
     <link rel="stylesheet" type="text/css" href="hishub.css">
 
 </head>
@@ -14,9 +16,10 @@
         <div id="userData">
             <table id="client">
                 <tr>
-                    <th>Client</th>
-                    <th>Date</th>
-                    <th>Num order</th>
+                 
+                    <th><label for="clientNameLablel">Client</label></th>
+                    <th><label for="orderDate">Date</label></th>
+                    <th><label for="orderNumber">Num order</label></th>
                 </tr>
                 <tr>
                     <td id="clientNameLablel"> </td>
@@ -31,9 +34,9 @@
 
             <table id="tfiraTable">
                 <tr>
-                    <th>Kant</th>
-                    <th>Hibur</th>
-                    <th>Hebel</th>
+                    <th> <label for="kant">Kant</label></th>
+                    <th> <label for="hibur">Hibur</label></th>
+                    <th> <label for="hebel">Hebel</label></th>
                 </tr>
                 <tr>
                     <td>
@@ -46,9 +49,10 @@
                         <input type="number" id="hebel" value="50" list="hebelList">
                     </td>
                 </tr>
+            </table>
+            <table>
                 <tr>
-
-                    <td>TFIRA: </td>
+                    <td> <label for="tfiraOption"> TFIRA:</label></td>
                     <td><select id="tfiraOption" autofocus="autofocus" onchange="selectChoice()">
                             <option value="plata">PLATA</option>
                             <option value="plataWithKant">PLATA WITH KANT</option>
@@ -56,22 +60,22 @@
                             <option value="awingsWithVolan">AWINGS WITH VOLAN</option>
                             <option value="nofelet">NOFELET</option>
                             <option value="nofeletWithVolan">NOFELET With Volan</option>
-                        </select> 
+                        </select>
                     </td>
+                    <td> <label for="gziraOp"> GZIRA:</label> </td>
+                    <td>
+                  
+
+                            <select id="gziraOp">
+                                <option> one side </option>
+                                <option> simtri big</option>
+                                <option> simtri litli </option>
+                                <option> equal </option>
+                            </select>
                    
-                    <td>   
-                            <div id="opthionDiv">
-                                <label for="gziraOp"> GZIRA:</label>
-                                <select id="gziraOp">
-                                    <option> one side </option>
-                                    <option> simtri big</option>
-                                    <option> simtri litli </option>
-                                    <option> equal </option>
-                                </select>
-                            </div>
-                    
+                    </td>
                 </tr>
-                
+
                 <tr>
                 </tr>
             </table>
@@ -80,8 +84,8 @@
             <table id="galilTable">
                 <tr>
                     <th>Bad Name</th>
-                    <th>Width</th>
-                    <th>Size(M)</th>
+                    <th> <label for="rohabBad"> Width</label></th>
+                    <th> <label for="orehGalil"> Size(M) </label></th>
                 </tr>
                 <tr>
                     <td id="badName"> </td>
@@ -97,15 +101,16 @@
 
             <table id="sizeTable">
                 <tr>
-                    <th>Length</th>
-                    <th>Width</th>
+                    <th><label for="orehMidaInput">Length</label></th>
+                    <th> <label for="rohabMida">Width</label></th>
                     <th>
                         <div class="sher">
-                            Pice
+                            <label for="mySherit"> Pice</label>
+                            <label for="exitSheerit">Exit?</label>
                             <input type="checkbox" id="exitSheerit">
                         </div>
                     </th>
-                    <th>    <label> Repet</label> </th>
+                    <th> <label for="repet"> Repet</label> </th>
                 </tr>
 
                 <tr>
@@ -119,19 +124,19 @@
                         <input type="number" id="mySherit" list="sheeritList">
                     </td>
                     <td>
-                         
-                            <input type="number" id="repet" value="1">
+
+                        <input type="number" id="repet" value="1">
                     </td>
                 </tr>
 
-            
+
             </table>
 
             <table id="volanSharvolTable">
                 <tr>
-                    <th>volan</th>
-                    <th>sug-v</th>
-                    <th>sharvul</th>
+                    <th> <label for="volan">Volan</label></th>
+                    <th> <label for="sugGali">Sug-v </label></th>
+                    <th><label for="sharvul">Sharvul  </label></th>
                 </tr>
                 <tr>
                     <td>
@@ -152,9 +157,9 @@
 
         <div id="sheeritSection">
 
-                <div class ="top"> 
-                        <button class ="exit">X</button>
-                    </div>
+            <div class="top">
+                <button class="exit">X</button>
+            </div>
 
             <table id="sheeritTable">
                 <tr>
@@ -203,8 +208,8 @@
         <!--End of sherit section-->
 
         <div id="orehTable">
-            <div class ="top"> 
-                <button class ="exit">X</button>
+            <div class="top">
+                <button class="exit">X</button>
             </div>
 
             <div id="orehDiv ">
