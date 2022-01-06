@@ -258,20 +258,25 @@
         </div>
 
         <div id="clientSec">
-            <button id="exitClientBtn">X</button>
+            <header class="flex-row space-between">
+                <h2>CLIENTS</h2>
+                <button class="exit-btn" id="exitClientBtn">X</button>
+            </header>
             <div id="clientDiv">
-                <table id="clientList">
+                <table id="clientList" class="full-width-table">
                 </table>
             </div>
             <div id="EditShowClient">
-                <input type="text" id="enterclientName" value="" placeholder="Client">
-                <input type="number" id="enterTel" value="" placeholder="Tel ">
-                <input type="text " id="enterStreet" value="" placeholder="Street ">
-                </br>
-                </br>
-                <button id="saveDataLocal">Save</button>
-                <button id="deleteDataLocal">delete</button>
-                <button id="selectClient">select</button>
+                <div class="flex-row ">
+                    <input type="text" id="enterclientName" value="" placeholder="Client">
+                    <input type="number" id="enterTel" value="" placeholder="Tel ">
+                    <input type="text " id="enterStreet" value="" placeholder="Street ">
+                </div>
+                <div class="flex-row flex-gap ">
+                    <button class="action-btn" id="saveDataLocal">Save</button>
+                    <button class="action-btn" id="deleteDataLocal">delete</button>
+                    <button class="action-btn" id="selectClient">select</button>
+                </div>
 
             </div>
         </div>

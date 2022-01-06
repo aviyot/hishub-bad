@@ -22,6 +22,8 @@ var sherBigSimtri;
 var SherSide;
 var sherEqulAll;
 
+var selectedClient = null;
+
 function getData() {
   mySherit = Number(document.getElementById("mySherit").value);
   rohabMida = Number(document.getElementById("rohabMida").value);
@@ -656,7 +658,7 @@ function showClientRecord() {
     }
   }
 }
-
+//Begin addClient function
 function addClient() {
   var clientArray = [];
   clientArray = JSON.parse(localStorage.getItem("ClientListLocalData"));
@@ -694,11 +696,12 @@ function addClient() {
     if (iHave) {
       clientArray.push(clientObject);
       localStorage.setItem("ClientListLocalData", JSON.stringify(clientArray));
-      alert("New Item added secsfully");
+      alert("New Item added successfully");
       showClientRecord();
     }
   }
 }
+//End addClient function
 
 function deleteClient() {
   var loadFromLocal = JSON.parse(localStorage.getItem("ClientListLocalData"));
@@ -731,6 +734,10 @@ function selectClient() {
 
 function showSelectedClient(ev) {
   var tdCh = ev.currentTarget;
+  if (selectedClient) selectedClient.style.color = "unset";
+  tdCh.style.color = "blue";
+
+  selectedClient = tdCh;
   var td1 = tdCh.childNodes[1].textContent;
   var td2 = tdCh.childNodes[2].textContent;
   var td3 = tdCh.childNodes[3].textContent;

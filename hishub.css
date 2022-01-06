@@ -365,10 +365,8 @@ ol {
 
 #badListTable th,
 #clientList th {
-  color: white;
   text-align: left;
-  font-size: x-large;
-  color: red;
+  font-size: large;
 }
 
 #DataEnter {
@@ -419,61 +417,34 @@ ol {
   left: 0%;
   width: 100%;
   height: 100%;
-  background-color: silver;
+  background-color: rgb(255, 215, 0);
   z-index: 1;
   opacity: 1;
   overflow: auto;
 }
 
-#exitClientBtn {
-  position: absolute;
-  top: 0px;
-  padding: 5px;
-  margin: 5px;
-  right: 0px;
-  background-color: red;
-  font-size: x-large;
+#clientSec h2 {
+  background-color: rgb(210, 170, 0);
+  flex-grow: 1;
 }
 
-#clientList > tr {
-  color: white;
+#clientSec tbody :nth-child(1) {
+  background-color: rgb(225, 185, 0);
+}
+.exit-btn {
+  padding: 2px;
+  font-size: large;
 }
 
 #EditShowClient {
   position: absolute;
   bottom: 0px;
-  background-color: red;
   width: 100%;
-}
-
-#EditShowClient > input {
-  width: 25%;
-}
-
-#clientDiv {
-  top: 10%;
-  position: absolute;
-  overflow: auto;
-  width: 100%;
-  height: 70%;
-  background-color: yellow;
-  border: 5px solid black;
 }
 
 #clientList {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  background-color: goldenrod;
-  color: white;
   font-size: large;
   /*height:80%; */
-}
-
-#EditShowClient button {
-  width: 20%;
-  font-size: large;
-  height: 10%;
 }
 
 #opthionData {
@@ -556,4 +527,26 @@ ol {
   color: white;
   background-color: red;
   margin: 5px;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.action-btn {
+  padding: 4px;
+  font-size: 16px;
+}
+
+.flex-gap {
+  gap: 8px;
 }
